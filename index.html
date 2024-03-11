@@ -1,0 +1,566 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="css/style.css?version=1.2.1">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <style>
+        .footer__developer a {
+            color: #569494;
+        }
+        a {
+            color: #569494;
+        }
+        body {
+            background-color: #CCCECF;
+        }
+        .bg-light {
+            background-color: #CCCECF!important;
+        }
+        .btn {
+            background-color: #569494;
+            border-color: #569494;
+        }
+        .btn.btn-primary:hover,
+        .btn.btn-primary:focus,
+        .btn.btn-primary:active {
+            background-color: #569494;
+            border-color: #569494;
+            box-shadow: none; 
+        }
+        .carousel {
+            overflow: hidden;
+            width: 100%;
+            max-width: 100vw;
+            position: relative;
+            aspect-ratio: 16/9;
+            }
+
+        .carousel img {
+                width: 50%; 
+                height: auto;
+                object-fit: cover;
+                display: none;
+            }
+
+        .carousel img:first-child {
+                display: block;
+            }
+
+        .carousel img {
+            width: 100%;
+            height: auto;
+            display: none;
+        }
+
+        .carousel img:first-child {
+            display: block;
+        }
+        button:focus {
+            outline: dotted 0px;
+            outline: -webkit-focus-ring-color auto 0px;
+        }
+        .gal-button {
+            height: 100%;
+            background-color: transparent;
+            border: none;
+            font-size: 30px;
+            color: rgba(66, 84, 90, 0.8); 
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .prevBtn {
+            left: 10px;
+        }
+
+        .nextBtn {
+            right: 10px;
+        }
+
+
+    </style>
+    <script>
+        $(document).ready(function () {
+            let currentIndex = 0;
+
+            function showImage(index) {
+                $(".carousel img").fadeOut(300);
+                $(".carousel img").eq(index).fadeIn(200);
+            }
+            showImage(currentIndex);
+
+            $(".nextBtn").click(function () {
+                currentIndex = (currentIndex + 1) % $(".carousel img").length;
+                showImage(currentIndex);
+            });
+
+            $(".prevBtn").click(function () {
+                currentIndex = (currentIndex - 1 + $(".carousel img").length) % $(".carousel img").length;
+                showImage(currentIndex);
+            });
+        });
+    </script>
+
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112661248-3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'UA-112661248-3');
+    </script>
+
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+        ym(87808549, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true
+        });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/87808549" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+
+
+    <title>Кибербиатлон 2024</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#de5144">
+    <link rel="shortcut icon" href="img/favicon/favicon.ico">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
+    <meta name="apple-mobile-web-app-title" content="Кибербиатлон 2018">
+    <meta name="application-name" content="Кибербиатлон 2018">
+    <meta name="msapplication-TileColor" content="#de5144">
+    <meta name="msapplication-config" content="img/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+</head>
+<body>
+<div class="wrap">
+    <div class="content">
+        <nav class="navbar fixed-top navbar-expand-md navbar-light bg-light">
+            <div class="container">
+                <a href="#" class="navbar-brand mb-0 h1">Кибербиатлон<sup>2024</sup></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-primary"
+                        aria-controls="navbar-primary" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbar-primary">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#info">Информация</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">Организаторы</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#gallery">Галерея</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#route">Как добраться</a>
+                        </li>
+                    </ul>
+                     <a class="btn btn-primary gform" href="https://priem.mirea.ru/lk/forms/cyberbiathlon" target="_blank">Регистрация!</a>
+                </div>
+            </div>
+        </nav>
+        <section class="intro" id="intro">
+            <div class="triangle triangle--bottom"></div>
+            <div class="intro__video">
+                <video autoplay muted loop autobuffer poster="img/intro.jpg">
+                    <source src="video/intro.webm" type="video/webm">
+                    <source src="video/intro.mp4" type="video/mp4">
+                    <source src="video/intro.ogv" type="video/ogv">
+                </video>
+            </div>
+            <div class="shade shade--dark"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                        <h1 class="display-4">Кибербиатлон<sup>2024</sup></h1>
+                        <h2 class="display-5">Отборочный этап</h2>
+                        <p class="lead">Командные соревнования по защите информации.</p>
+                            <a href="https://priem.mirea.ru/lk/forms/cyberbiathlon" target="_blank" class="btn btn-primary btn-lg gform">
+                                Регистрация!
+                            </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="info" id="info">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h2>Формат</h2>
+                        <p><strong>Кибербиатлон</strong> — командные соревнования по защите информации.</p>
+                        <p>Приглашаем принять участие команды <strong>школьников и студентов первых - вторых курсов</strong>. Соревнования включают задания по <strong>криптографии, стеганографии, уязвимостям веб-приложений</strong> и другим аспектам компьютерной и информационной безопасности.</p>
+                        <p>Решением каждой задачи является <strong>флаг</strong>, приносящий команде очки в зависимости от сложности задания.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <h2>Регламент</h2>
+                        <ul class="fa-ul">
+                            <li><span class="fa-li"><i class="fas fa-clock"></i></span>Продолжительность <strong>6 часов</strong>.</li>
+                            <li><span class="fa-li"><i class="fas fa-graduation-cap"></i></span>Задания ориентированы на <strong>школьников 9-11 классов</strong>.</li>
+                            <li><span class="fa-li"><i class="fas fa-users"></i></span>Количество человек в команде: <strong>3-5 человек</strong>.</li>
+                            <li><span class="fa-li"><i class="fas fa-exclamation-triangle"></i></span>Обязательна <strong>предварительная регистрация</strong>.</li>
+                            <li><span class="fa-li"><i class="fas fa-laptop"></i></span>Приветствуются собственные ноутбуки на очных соревнованиях.</li>
+                            <li><span class="fa-li"><i class="fas fa-times"></i></span>Запрещены деструктивные воздействия на инфраструктуру и устройства других участников.</li>
+                            <li><span class="fa-li"><i class="fas fa-times"></i></span>Запрещено распространение решений и флагов между участниками разных команд.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row my-4">
+                    <div class="col-12">
+                        <h2>О соревнованиях</h2>
+                        <p>Отборочный этап <strong>Кибербиатлона<sup>2024</sup></strong> пройдет 7 апреля в онлайн формате. На базе <a href="https://www.mirea.ru/">РТУ МИРЭА</a><br><strong>Кибербиатлон</strong> проводится уже не первый год, становясь стимулом для развития в сфере IT-безопасности.<br>Команды-победители онлайн этапа пройдут в следующий этап <strong>Кибербиатлона</strong>, который состоится <strong>14 апреля</strong>.<br> Положение о проведении соревнований и регламент доступны по ссылкам в футере сайта: <a target="_blank" href="polozhenie.pdf">положение</a>, <a target="_blank" href="reglament.pdf">регламент</a>.Также можно получить информацию по подготовке к соревнованиям на <a target="_blank" href="https://mireactf.ru/">образовательной платформе</a>.</p>
+                    </div>                                        
+                </div>
+                <div class="row">
+                    <div class="col-md-6 align-self-center">
+                        <h2>Расписание событий</h2>
+                        <table class="table schedule">
+                            <tbody>
+                                <tr>
+                                    <td class="schedule__date"><strong>7 апреля</strong></td>
+                                    <td colspan="2">Заочный отборочный тур соревнований</td>
+                                </tr>
+                            </tbody>
+                            <tbody>
+                                <tr>
+                                    <td class="schedule__date" rowspan="6"><strong>14 апреля 2024, 11:00</strong></td>
+                                    <td colspan="2">Заключительный очный тур соревнований в здании РТУ МИРЭА</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    
+                    <div class="col-md-6">
+                        <h2>Призы</h2>
+                        <ul class="fa-ul">
+                            <li>
+                                <span class="fa-li">
+                                    <i class="fas fa-certificate"></i>
+                                    <span class="fa-layers-text fa-inverse" data-fa-transform="shrink-8" style="font-weight:700">+5</span>
+                                </span>
+                                Команды-победители будут приглашены для участия в финальном этапе <strong>Кибербиатлона<sup>2024</sup></strong>, который пройдет 14 апреля.
+                            </li>
+                            <li>
+                                <span class="fa-li">
+                                    <i class="fas fa-flag-checkered"></i>
+                                </span>
+                                Победители <strong>Кибербиатлона<sup>2024</sup></strong> получат памятные призы от «Лаборатории Касперского».
+                            </li>
+                            <li>
+                                <span class="fa-li">
+                                    <i class="fas fa-book"></i>
+                                </span>
+                                Новые знания и навыки.
+                            </li>
+                            <li>
+                                <span class="fa-li">
+                                    <i class="fas fa-level-up-alt"></i>
+                                </span>
+                                Непревзойденный опыт.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="about" id="about">
+            <div class="triangle triangle--top"></div>
+            <div class="triangle triangle--bottom"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 mb-4">
+                        <h2 class="display-4">Организаторы</h2>
+                    </div>
+                    <div class="col-lg-6">
+                        <h3>Институт кибербезопасности и цифровых технологий</h3>
+                        <p>
+                            Институт ИКБ является одним из самых многочисленных и старейших институтов МИРЭА -
+                            Российского технологического университета. Это один из лучших Институтов по подготовки
+                            специалистов в области Информационной безопасности.
+                        </p>
+
+                        <h3>Кафедра КБ-4 &laquo;Интеллектуальные системы информационной безопасности&raquo;</h3>
+                        <p>
+                            Преподаватели, работающие на данной кафедре, славятся своим профессионализмом и уже на
+                            протяжении многих лет готовят лучших
+                            IT-специалистов. Хорошая оснащенность оборудованием позволяет проводить обучение на самом
+                            высоком уровне.
+                        </p>
+
+                        <h3>Positive Technologies</h3>
+                        <p>
+                            Positive Technologies — ведущий разработчик решений для информационной безопасности.
+                            Технологии и сервисы компании используют более 2300 организаций по всему миру,
+                            в том числе 80% компаний из рейтинга «Эксперт-400».
+                        </p>
+
+                        <h3>Детский технопарк «Альтаир»</h3>
+                        <p>
+                            Уникальный проект, созданный <a href="https://www.mirea.ru/">РТУ МИРЭА</a> при поддержке
+                            Правительства Москвы. На площадке детского технопарка школьники могут принять участие в
+                            программах профориентации, ознакомиться с работой высокотехнологичного оборудования и
+                            освоить программы дополнительного образования, разработанные сотрудниками университета при
+                            участии индустриальных партнёров детского технопарка.
+                        </p>
+
+                        <h3>DeteAct (ООО «Непрерывные технологии»)</h3>
+                        <p>
+                            Компания, предоставляющая сервисы по практической информационной безопасности и непрерывному
+                            обеспечению безопасности бизнеса: тестирование на проникновение (пентест), аудит и анализ
+                            защищённости, построение процессов безопасной разработки (DevSecOps).
+                        </p>
+                    </div>
+                    <div class="col-lg-6">
+                        <div>
+
+                            <div class="row pb-5">
+                                <div class="col-6">
+                                    <a href="https://www.mirea.ru/" target="_blank">
+                                        <img width="100%" src="img/logo-rtu.png"/>
+                                    </a>
+                                </div>
+                                <div class="col-6">
+                                    <a href="https://www.mirea.ru/education/the-institutes-and-faculties/institut-kiberbezopasnosti-i-tsifrovykh-tekhnologiy/about-the-institute/" target="_blank">
+                                        <img width="100%" src="img/KBSP.png"/>
+                                    </a>
+                                </div>
+                                <div class="col-4">
+                                    <a href="https://volgactf.ru/" target="_blank">
+                                        <img width="100%" src="img/logo-volgactf.svg"/>
+                                    </a>
+                                </div>
+                                <div class="col-7">
+                                    <a href="https://deteact.com/">
+                                        <img width="100%" src="img/logo_new_white.png"/>
+                                    </a>
+                                </div>
+                                <div class="col-7">
+                                    <a href="https://www.mirea.ru/" target="_blank">
+                                        <img width="100%" src="img/logo-explabs.svg"/>
+                                    </a>
+                                </div>
+                                <div class="col-4">
+                                    <a href="https://t.me/bykvaadm" target="_blank">
+                                        <img width="100%" src="img/logo-bykvaadm.png"/>
+                                    </a>
+                                </div>
+                                <div class="col-12">
+                                    <a href="https://www.ptsecurity.com/ww-en/" target="_blank">
+                                        <img width="100%" src="img/pt.png"/>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!--                                <div class="logos__sizer"></div>-->
+                            <!--                                <div class="logos__logo logos__logo&#45;&#45;mirea logos__logo&#45;&#45;2x">-->
+                            <!--                                    <a href="https://www.mirea.ru/">-->
+                            <!--                                        <img src="img/logo-rtu.png"/>-->
+                            <!--                                    </a>-->
+                            <!--                                </div>-->
+                            <!--                                <div class="logos__logo logos__logo&#45;&#45;ikbsp">-->
+                            <!--                                    <a href="https://ikbsp.ru/">-->
+                            <!--                                        <img class="svg" src="img/logo-ikbsp.svg"/>-->
+                            <!--                                    </a>-->
+                            <!--                                </div>-->
+                            <!--                                <div class="logos__logo logos__logo&#45;&#45;volgactf">-->
+                            <!--                                    <a href="https://volgactf.ru/">-->
+                            <!--                                        <img class="svg" src="img/logo-volgactf.svg" />-->
+                            <!--                                    </a>-->
+                            <!--                                </div>-->
+                            <!--                                <div class="logos__logo logos__logo&#45;&#45;deteact">-->
+                            <!--                                    <a href="https://deteact.com/">-->
+                            <!--                                        <img src="img/logo-deteact.png" />-->
+                            <!--                                    </a>-->
+                            <!--                                </div>-->
+                            <!--                                <div class="logos__logo logos__logo&#45;&#45;explabs logos__logo&#45;&#45;2x">-->
+                            <!--                                    <a href="https://explabs.ru/">-->
+                            <!--                                        <img src="img/logo-explabs.svg">-->
+                            <!--                                    </a>-->
+                            <!--                                </div>-->
+                            <!--                                <div class="logos__logo logos__logo&#45;&#45;bykvaadm">-->
+                            <!--                                    <a href="https://t.me/bykvaadm">-->
+                            <!--                                        <img src="img/logo-bykvaadm.png" />-->
+                            <!--                                    </a>-->
+                            <!--                                </div>-->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="register" id="register">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <h2 class="display-4">Регистрация команды</h2>
+                         <p class="lead">Регистрация команды <strong>обязательна</strong> для участия в соревнованиях</p>
+<!--                        <p class="lead">Регистрация закрыта</p>-->
+
+                        <p>
+                            <a href="https://priem.mirea.ru/lk/forms/cyberbiathlon" target="_blank">
+                                <button class="btn btn-primary btn-lg">Регистрация</button>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="gallery mt-5" id="gallery">
+
+            <div class="container">
+
+                <div class="row mb-5">
+                    <div class="col-12 text-center">
+                        <h2 class="display-4">Галерея</h2>
+                    </div>
+                </div>
+
+
+                <div class="carousel">
+                    <button class="gal-button prevBtn">&lt;</button>
+                    <img src="img/1.jpg" alt="Image 1">
+                    <img src="img/2.jpg" alt="Image 2">
+                    <img src="img/3.jpg" alt="Image 3">
+                    <img src="img/4.jpg" alt="Image 4">
+                    <img src="img/5.jpg" alt="Image 5">
+                    <button class="gal-button nextBtn">&gt;</button>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="route" id="route">
+            <div class="triangle triangle--top"></div>
+
+            <div class="route__map">
+                <!--                    <div id="google-map"></div>-->
+                <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Afc7942698efbf375f18f4fef2dcc4c13ced2164cecbf55d6bbcbb50adeaaa2a4&amp;width=100%25&amp;height=655&amp;lang=ru_RU&amp;scroll=true"></script>
+            </div>
+        </section>
+        <footer class="footer" id="footer">
+            <div class="footer__above">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-5">
+                            <h2>Дата и место</h2>
+                            <ul class="fa-ul">
+                                <li>
+                                        <span class="fa-li">
+                                            <i class="fas fa-clock"></i>
+                                        </span>7 апреля 2024
+                                </li>
+                                <li>
+                                        <span class="fa-li">
+                                            <i class="fas fa-map-marker"></i>
+                                        </span>Онлайн, в любой точке планеты)
+                                </li>
+
+                                <br>
+
+                                <li>
+                                        <span class="fa-li">
+                                            <i class="fas fa-clock"></i>
+                                        </span> 14 апреля 2024, 11:00
+                                </li>
+                                <li>
+                                        <span class="fa-li">
+                                            <i class="fas fa-map-marker"></i>
+                                        </span> <a href="https://yandex.ru/maps/org/rtu_mirea/121334629081/?ll=37.476404%2C55.660956&z=13.94">Москва, проспект
+                                    Вернадского, 86 строение 2</a>
+                                </li>
+                                <!-- <li>
+                                    <span class="fa-li">
+                                        <i class="fas fa-subway"></i>
+                                    </span>Юго-Западная <small data-toggle="tooltip" data-placement="right" title="Последний вагон из центра, налево">(выход 6)</small></li> -->
+                            </ul>
+                        </div>
+                        <div class="col-lg-5 footer__contact">
+                            <h2>Контакты</h2>
+                            <ul class="fa-ul">
+                                <li>
+                                        <span class="fa-li">
+                                            <i class="fas fa-envelope"></i>
+                                        </span>
+                                    <a href="mailto:magomedov_sh@mirea.ru">magomedov_sh@mirea.ru</a>
+                                </li>
+                                <li>
+                                        <span class="fa-li">
+                                            <i class="fas fa-phone"></i>
+                                        </span>
+                                    <a href="tel:+74952156565">+7 (495)-215-65-65</a> (Доб. 6803)
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-2 footer__contact">
+                            <h2>Документы</h2>
+                            <ol class="pl-0">
+                                <li style=" list-style-type: none;">
+                                    <a target="_blank" href="https://ctf.mirea.tech/reglament.pdf">Регламент</a>
+                                </li>
+                                <li style=" list-style-type: none;">
+                                    <a target="_blank" href="https://ctf.mirea.tech/polozhenie.pdf">Положение</a>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__below">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 footer__copyright">
+                            <p>&copy; 2024 <a href="https://www.mirea.ru/">РТУ МИРЭА</a>. Все права защищены.</p>
+                        </div>
+                        <div class="col-lg-6 footer__developer">
+                            <p>Дизайн и разработка &mdash;
+                                <a href="https://www.mirea.ru/education/the-institutes-and-faculties/institute-for-integrated-security-and-special-instrumentation/the-structure-of-the-institute/department-of-kb-4-automated-control-systems/"
+                                   target="_blank">КБ-4 &laquo;Интеллектуальные системы
+                                    информационной безопасности&raquo;</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</div>
+<script src="https://use.fontawesome.com/releases/v5.0.9/js/all.js"
+        integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl"
+        crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+
+<script src="js/main.js?version=1.1.0"></script>
+
+<script type="text/javascript">
+
+</script>
+
+</body>
+</html>
